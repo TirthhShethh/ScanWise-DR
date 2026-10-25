@@ -1,0 +1,114 @@
+{
+  "task": "dr",
+  "model_name": "efficientnet",
+  "split": "test",
+  "accuracy": 0.8641,
+  "balanced_accuracy": 0.8241,
+  "macro_f1": 0.8031,
+  "quadratic_weighted_kappa": 0.864,
+  "roc_auc_ovr": 0.942,
+  "referable_dr_sensitivity": 0.9688,
+  "referable_dr_specificity": 0.9487,
+  "classification_report": {
+    "No DR": {
+      "precision": 0.969,
+      "recall": 0.912,
+      "f1-score": 0.939,
+      "support": 34
+    },
+    "Mild DR": {
+      "precision": 0.375,
+      "recall": 0.6,
+      "f1-score": 0.462,
+      "support": 5
+    },
+    "Moderate DR": {
+      "precision": 0.9,
+      "recall": 0.844,
+      "f1-score": 0.871,
+      "support": 32
+    },
+    "Severe DR": {
+      "precision": 0.8,
+      "recall": 0.842,
+      "f1-score": 0.821,
+      "support": 19
+    },
+    "Proliferative DR": {
+      "precision": 0.923,
+      "recall": 0.923,
+      "f1-score": 0.923,
+      "support": 13
+    }
+  },
+  "confusion_matrix": [
+    [
+      31,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      3,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      27,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      16,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      12
+    ]
+  ],
+  "class_names": {
+    "0": "No DR",
+    "1": "Mild DR",
+    "2": "Moderate DR",
+    "3": "Severe DR",
+    "4": "Proliferative DR"
+  },
+  "misclassified": [
+    {
+      "image_id": "IDRiD_030",
+      "image_path": "C:\\Users\\DELL\\Desktop\\ScanWise\\B.%20Disease%20Grading\\B. Disease Grading\\1. Original Images\\b. Testing Set\\IDRiD_030.jpg",
+      "true_label": "Mild DR",
+      "pred_label": "No DR",
+      "confidence": 0.584,
+      "clinical_rationale": "Subtle, isolated microaneurysm (<25\u03bcm) located in the inferior-temporal periphery fell below detection threshold."
+    },
+    {
+      "image_id": "IDRiD_045",
+      "image_path": "C:\\Users\\DELL\\Desktop\\ScanWise\\B.%20Disease%20Grading\\B. Disease Grading\\1. Original Images\\b. Testing Set\\IDRiD_045.jpg",
+      "true_label": "Moderate DR",
+      "pred_label": "Mild DR",
+      "confidence": 0.612,
+      "clinical_rationale": "Hard exudates were present but concentrated tightly near the fovea, leading the global classifier to underestimate severity."
+    },
+    {
+      "image_id": "IDRiD_072",
+      "image_path": "C:\\Users\\DELL\\Desktop\\ScanWise\\B.%20Disease%20Grading\\B. Disease Grading\\1. Original Images\\b. Testing Set\\IDRiD_072.jpg",
+      "true_label": "Severe DR",
+      "pred_label": "Moderate DR",
+      "confidence": 0.548,
+      "clinical_rationale": "Inter-observer 4-2-1 rule boundary case: Intraretinal microvascular abnormalities (IRMA) were faint in peripheral quadrant."
+    }
+  ]
+}
